@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="index.js" defer></script>
+  <script src="task.js" defer></script>
+  <script src="validate.js" defer></script>
+  <script src="https://kit.fontawesome.com/e5105e6c4a.js" crossorigin="anonymous"></script>
+  
+</head>
+
+<body>
+  <div class="container">
+      <div class="col-sm-18">
+        <div id="headCard">
+          <div  id="messageBoard">
+            <h1 class="display-4 text-center">
+                <i class="far fa-sticky-note text-danger"></i> My<span class="text-danger">Task</span>Board</h1>
+          </div>
+          <div class="wrapper">
+            <div class="card-body">
+              <div class="col">
+                <form class="needs-validation" novalidate class="border border-warning bg-dark" id="creator"
+                  name="taskManager">
+                  <div class="form-row">
+      <!-- Name input  -->
+                    <div class="col-md-6 mb-6">
+                      <label for="validationCustom01">Task Name</label>
+                      <input type="text" class="form-control" id="taskName" placeholder="Task Name" value="" required>
+                      <div class="invalid-feedback">
+                        Name Your Task
+                      </div>
+                      <div class="valid-feedback">
+                        Great Name!
+                      </div>
+                    </div>
+       <!-- Date input  -->
+                    <div class="col-md-6 mb-6">
+                      <label for="validationCustom02"><i class="far fa-calendar-alt"></i>
+                        Task Date</label>
+                      <div class="input-group date" data-provide="datepicker">
+                        <input type="date" class="form-control" id="dueDate" placeholder="Date" required>
+                        <div class="input-group-addon">
+                        </div>
+                        <div class="invalid-feedback">
+                           task  date
+                        </div>
+                      </div>
+                    </div>
+      <!-- Time input  -->
+                    <div class="col-4">
+                      <label for="validationCustom03"><i class="far fa-clock"></i> Task Time</label>
+                      <div class="bootstrap-timepicker">
+                        <input id="timepicker" type="time" class="form-control" 
+                            required>
+                      </div>
+                      <div class="invalid-feedback">
+                        Please valid time.
+                      </div>
+                    </div>
+      <!-- Details input  -->
+                    <div class="col-8">
+                      <label for="validationCustom04">Task Details</label>
+                      <textarea class="form-control" id="taskDetail" rows="3" required></textarea>
+                      <div class="invalid-feedback">
+                       Please Set Details.
+                      </div>
+                      <div class="valid-feedback">
+                        Awesome info!
+                      </div>
+                    </div>
+                  </div>
+              </div>
+              <button class="btn btn-outline-success" id="butonSub" type="submit" onclick="return false">Create
+                Task</button>
+              <button class="btn btn-outline-danger" id="butonRes" type="reset">Clean up</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+<!-- Main tasks area-->
+      <div class="container">
+        <div id="stage" class="row">
+        </div>
+      </div>
+ </div>
+</body>
+</html>
